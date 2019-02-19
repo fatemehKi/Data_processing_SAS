@@ -48,3 +48,24 @@ run;
 
 proc print data=four;
 run;
+
+
+/* in order to remove no*/
+proc print data europeancar noobs;
+run;
+
+
+/* data steps vs --- proc steps:
+1. begins with data statments --- begins with proc statments
+2. read and modify data ---- perform specifix analysis or function
+3. create a SAS data set ---- produce results or report
+*/ 
+/* we only have two type of variables : numeric vs character.. 
+we need $ sign after character
+if we are missing a numeric value we need to use '.' dot (instead of null)
+and for the character it is blank*/
+
+/******************important***************************/
+/*contents provide us the general information of a dataset*/
+proc contents data=sashelp.cars;
+run;
