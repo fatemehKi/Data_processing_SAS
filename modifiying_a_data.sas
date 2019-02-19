@@ -20,3 +20,29 @@ run;
 proc print data=two; /*printing the summation of the salary*/
 sum salary bouns;
 run; 
+
+
+/*where condition: */
+data europeancar;
+  set sashelp.cars; /*library name sashelp and the data set is cars*/
+  where origin = "Europe"; /*it is case snsitive for chars*/
+run;
+
+
+/************salary beyond 50K*/
+data three;
+set tt.first;
+where salary > 50000;
+run;
+
+proc print data=three;
+run;
+
+/*from the other table which is temp not permanent*/
+data four;
+set work.Two;
+where (salary+bonus) > 50000;
+run;
+
+proc print data=four;
+run;
