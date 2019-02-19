@@ -69,3 +69,39 @@ and for the character it is blank*/
 /*contents provide us the general information of a dataset*/
 proc contents data=sashelp.cars;
 run;
+
+/*looking at top 10 observations*/
+proc print data=sashelp.cars( obs = 10);
+run;
+
+/* in order to reformat the date
+in the storage it is still saved numeric but formated way is in the print
+procedure doesn't change the */
+data test;
+input fname $ lname $ sex dob empdate;
+informat dob empdate mmddyy6.;
+dataline;
+john martin 1 123069 100172
+;
+run;
+
+data test1;
+set test;
+format dob empdate mmddyy6.;
+run;
+
+
+proc print data=test;
+format dob empdate date6.;
+run;
+
+
+/*adding a column in the date format and print*/
+data five;
+set First_mine;
+dob = 367974
+934267
+;
+run;
+proc print data = five;
+run;
