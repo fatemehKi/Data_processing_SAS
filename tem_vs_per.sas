@@ -1,3 +1,14 @@
+/*temperoray creation*/
+data first;
+
+input studentID fname $ lname $ Salary;
+
+dataline;
+1 john smith 50000
+2 Mary Lee 60000
+;
+run;
+
 /*permanent creation*/
 libname tt "C:\test";
 
