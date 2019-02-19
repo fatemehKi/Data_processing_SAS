@@ -16,3 +16,7 @@ run;
 proc print data=two; /*tt means the library name and first is the dataset*/
 run; 
 
+
+proc print data=two; /*printing the summation of the salary*/
+sum salary bouns;
+run; 
