@@ -28,6 +28,8 @@ data europeancar;
   where origin = "Europe"; /*it is case snsitive for chars*/
 run;
 
+proc print data= europeancar;
+run;
 
 /************salary beyond 50K*/
 data three;
