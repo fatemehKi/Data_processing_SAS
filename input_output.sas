@@ -102,8 +102,22 @@ run;
 
 /*so far it was using data not procedure and nothing done now proc
 dbms = database managment system
-been REPLACING A SAS FILE INTO ANOTHER FILE*/
+since sas can nt accept id, it changed the id to s_id
+been REPLACING A SAS FILE INTO ANOTHER FILE
+---data uses infile but proc import uses datafile*/
 proc import datafile = "\\file1\LabShare\DSA 04-Feb-2019\SAS\participant1.csv" out = work.participant_test3 dbms = csv replace;
 GUESSINGROWS =100;
 GETNAMES = YES;
 RUN;
+
+proc import datafile = "C:\Users\mfatemeh\Desktop\Book2.xlsx" out = work.fk5 dbms = excel replace;
+GUESSINGROWS =10;
+GETNAMES = YES;
+RUN;
+
+data fk3;
+infile 'C:\Users\mfatemeh\Desktop\Book2.xlsx' dlm = ',' firstobs=1;
+input id $ fname $ lname $ acode phone email $;
+run;
+
+
