@@ -16,3 +16,14 @@ M 25 66450
 M 65 .
 ;
 run;
+
+
+data mine;
+input ID l_date s1 s2 s3;
+informat l_date mmddyy10.;
+CARDS;
+1 123099 75 65 85
+2 123098 85 45 75
+;
+/*avg_score = mean(s1,s2,s3);*/
+run;
