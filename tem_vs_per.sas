@@ -1,5 +1,5 @@
 /*temperoray creation*/
-data first;
+data first; 
 
 input studentID fname $ lname $ Salary;
 
@@ -14,7 +14,7 @@ libname tt "C:\test";
 
 data tt.first;
 
-input studentID fname $ lname $ Salary; 
+input studentID fname $ lname $ Salary;  
 /*the $ sign for the character is required to have an space*/
 
 dataline;
