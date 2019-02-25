@@ -6,7 +6,7 @@ to be written to all data sets that are named in the DATA statement.*/
 data distance_2;
  do miles = 1 to 20; 
    kilometers = miles *1.61;
-   output;
+   output; /*if we don't do output here, we just get the last value in the dataset*/
  end;
 run;
 proc print data = distance_2;
