@@ -43,6 +43,7 @@ proc print data = demo_2;
 run;
 
 /****list input**/
+/****length statmenr shoulb be BEFORE input statment*****/
 /*lenght vs informat: we don't need "." for length */
 data demo_10;
 informat id $3. gender $1. dob mmddyy8.;
