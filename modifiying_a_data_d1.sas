@@ -4,10 +4,12 @@ input studentID fname $ lname $ Salary;
 /*the $ sign for the character is required to have an space*/
 
 dataline; /*the record of dataset coming after this word*/
-1 john smith 50000
-2 Mary Lee 60000
+1 john smith 50000 
+2 Mary       Lee 60000 /* the space in the data does nt effect the result 
+however, the data in the wrong observation is not saved for the next observation*/
 ; 
 run; /*the line above is required*/
+/************* iportant: statment sof data step can't be run after dataline.. everything need to be before*****/
 
 data two;
 set first;
