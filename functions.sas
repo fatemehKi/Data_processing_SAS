@@ -2,6 +2,7 @@
 
 	/*compile function removes the blank*/
 	/*all variables in the data step is saved in the data set for printing*/
+ /*aubstr is working only on characters*/
 data test1;
 first_name = '    ste';
 last_name = 'good   ';
@@ -33,4 +34,10 @@ myage = (today() - '06Sep1982'D)/365.25;
 myage2 = (today() - mdy(9,6,1982))/365.25;
 run;
 proc print data = ts_3;
+run;
+
+data ts_4;
+tod=weekday(today());
+run;
+proc print data = ts_4;
 run;
