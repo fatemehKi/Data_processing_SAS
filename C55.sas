@@ -58,7 +58,7 @@ data one;
  0.5 . . 8
  ;
 run;
-/* if we miss one argument '.' we can don't have total1 but total2 and total3 are exsist*/
+
 data sums;
  set one;
  total1 = x1 + x2 + x3 + x4;
